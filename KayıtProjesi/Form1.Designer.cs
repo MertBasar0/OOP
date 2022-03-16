@@ -187,6 +187,7 @@
             this.btn_resimSec.TabIndex = 8;
             this.btn_resimSec.Text = "Resim ekle";
             this.btn_resimSec.UseVisualStyleBackColor = true;
+            this.btn_resimSec.Click += new System.EventHandler(this.btn_resimSec_Click);
             // 
             // msk_phoneNo
             // 
@@ -343,6 +344,7 @@
             this.Controls.Add(this.gbPersonelBilgileri);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gbPersonelBilgileri.ResumeLayout(false);
             this.gbPersonelBilgileri.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_resim)).EndInit();
