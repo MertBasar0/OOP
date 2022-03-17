@@ -41,10 +41,10 @@ namespace OOP_Enum
             p.Departman = (Departmanlar)Enum.Parse(typeof(Departmanlar), departman.Text);
 
 
-            //liste.Items.Add(p.AdiSoyadi);
-            //liste.Items.Add(p.Departman);
-            //liste.Items.Add("---");
-            MessageBox.Show($"{p.AdiSoyadi}  {p.Departman}");
+            liste.Items.Add(p.AdiSoyadi);
+            liste.Items.Add(p.Departman);
+            liste.Items.Add("---");
+            // MessageBox.Show($"{p.AdiSoyadi}  {p.Departman}");
         }
     }
 

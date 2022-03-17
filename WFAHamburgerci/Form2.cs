@@ -17,6 +17,11 @@ namespace WFAHamburgerci
             InitializeComponent();
         }
 
-
+        private void btn_kaydet_Click(object sender, EventArgs e)
+        {
+            Form1.Menuler.Add(new menu { MenuAdi = txt_menuAdi.Text, Fiyat = nmr_fiyat.Value});
+            Temizlik.Temizle(this.Controls);
+            MessageBox.Show("Başarılı şekilde eklendi");
+        }
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.grb_menuBilgileri = new System.Windows.Forms.GroupBox();
+            this.btn_kaydet = new System.Windows.Forms.Button();
+            this.nmr_fiyat = new System.Windows.Forms.NumericUpDown();
+            this.txt_menuAdi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txt_menuAdi = new System.Windows.Forms.TextBox();
-            this.nmr_fiyat = new System.Windows.Forms.NumericUpDown();
-            this.btn_kaydet = new System.Windows.Forms.Button();
             this.grb_menuBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_fiyat)).BeginInit();
             this.SuspendLayout();
@@ -53,30 +53,15 @@
             this.grb_menuBilgileri.TabStop = false;
             this.grb_menuBilgileri.Text = "Menü Bilgileri";
             // 
-            // label2
+            // btn_kaydet
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Fiyat";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Menü Adı";
-            // 
-            // txt_menuAdi
-            // 
-            this.txt_menuAdi.Location = new System.Drawing.Point(112, 30);
-            this.txt_menuAdi.Name = "txt_menuAdi";
-            this.txt_menuAdi.Size = new System.Drawing.Size(199, 20);
-            this.txt_menuAdi.TabIndex = 1;
+            this.btn_kaydet.Location = new System.Drawing.Point(196, 120);
+            this.btn_kaydet.Name = "btn_kaydet";
+            this.btn_kaydet.Size = new System.Drawing.Size(114, 29);
+            this.btn_kaydet.TabIndex = 3;
+            this.btn_kaydet.Text = "Kaydet";
+            this.btn_kaydet.UseVisualStyleBackColor = true;
+            this.btn_kaydet.Click += new System.EventHandler(this.btn_kaydet_Click);
             // 
             // nmr_fiyat
             // 
@@ -95,14 +80,30 @@
             0,
             0});
             // 
-            // btn_kaydet
+            // txt_menuAdi
             // 
-            this.btn_kaydet.Location = new System.Drawing.Point(196, 120);
-            this.btn_kaydet.Name = "btn_kaydet";
-            this.btn_kaydet.Size = new System.Drawing.Size(114, 29);
-            this.btn_kaydet.TabIndex = 3;
-            this.btn_kaydet.Text = "Kaydet";
-            this.btn_kaydet.UseVisualStyleBackColor = true;
+            this.txt_menuAdi.Location = new System.Drawing.Point(112, 30);
+            this.txt_menuAdi.Name = "txt_menuAdi";
+            this.txt_menuAdi.Size = new System.Drawing.Size(199, 20);
+            this.txt_menuAdi.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Fiyat";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Menü Adı";
             // 
             // Form2
             // 

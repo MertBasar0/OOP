@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_ad = new System.Windows.Forms.TextBox();
-            this.nmr_fiyat = new System.Windows.Forms.NumericUpDown();
             this.btn_ekle = new System.Windows.Forms.Button();
+            this.nmr_fiyat = new System.Windows.Forms.NumericUpDown();
+            this.txt_ad = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_fiyat)).BeginInit();
             this.SuspendLayout();
@@ -52,30 +52,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Extra Malzeme Bilgisi";
             // 
-            // label1
+            // btn_ekle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Adı";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Fiyat";
-            // 
-            // txt_ad
-            // 
-            this.txt_ad.Location = new System.Drawing.Point(105, 43);
-            this.txt_ad.Name = "txt_ad";
-            this.txt_ad.Size = new System.Drawing.Size(166, 20);
-            this.txt_ad.TabIndex = 1;
+            this.btn_ekle.Location = new System.Drawing.Point(174, 130);
+            this.btn_ekle.Name = "btn_ekle";
+            this.btn_ekle.Size = new System.Drawing.Size(96, 35);
+            this.btn_ekle.TabIndex = 3;
+            this.btn_ekle.Text = "Ekle";
+            this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // nmr_fiyat
             // 
@@ -94,14 +79,30 @@
             0,
             0});
             // 
-            // btn_ekle
+            // txt_ad
             // 
-            this.btn_ekle.Location = new System.Drawing.Point(174, 130);
-            this.btn_ekle.Name = "btn_ekle";
-            this.btn_ekle.Size = new System.Drawing.Size(96, 35);
-            this.btn_ekle.TabIndex = 3;
-            this.btn_ekle.Text = "Ekle";
-            this.btn_ekle.UseVisualStyleBackColor = true;
+            this.txt_ad.Location = new System.Drawing.Point(105, 43);
+            this.txt_ad.Name = "txt_ad";
+            this.txt_ad.Size = new System.Drawing.Size(166, 20);
+            this.txt_ad.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Fiyat";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Adı";
             // 
             // Form3
             // 

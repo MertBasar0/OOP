@@ -36,7 +36,6 @@
             this.rb_buyuk = new System.Windows.Forms.RadioButton();
             this.rb_orta = new System.Windows.Forms.RadioButton();
             this.rb_kucuk = new System.Windows.Forms.RadioButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.cb_menu = new System.Windows.Forms.ComboBox();
@@ -44,9 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_toplamTutar = new System.Windows.Forms.Label();
             this.btn_siparisOnay = new System.Windows.Forms.Button();
+            this.flw_Extramalzemeler = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_gecis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,14 +122,6 @@
             this.rb_kucuk.Text = "küçük";
             this.rb_kucuk.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(15, 411);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(434, 106);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -173,6 +165,7 @@
             this.btn_siparisEkle.TabIndex = 8;
             this.btn_siparisEkle.Text = "Sipariş Ekle";
             this.btn_siparisEkle.UseVisualStyleBackColor = true;
+            this.btn_siparisEkle.Click += new System.EventHandler(this.btn_siparisEkle_Click);
             // 
             // label3
             // 
@@ -182,7 +175,6 @@
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Toplam Tutar..";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lbl_toplamTutar
             // 
@@ -201,12 +193,32 @@
             this.btn_siparisOnay.TabIndex = 10;
             this.btn_siparisOnay.Text = "Siparişi Onayla";
             this.btn_siparisOnay.UseVisualStyleBackColor = true;
+            this.btn_siparisOnay.Click += new System.EventHandler(this.btn_siparisOnay_Click);
+            // 
+            // flw_Extramalzemeler
+            // 
+            this.flw_Extramalzemeler.Location = new System.Drawing.Point(15, 411);
+            this.flw_Extramalzemeler.Name = "flw_Extramalzemeler";
+            this.flw_Extramalzemeler.Size = new System.Drawing.Size(433, 113);
+            this.flw_Extramalzemeler.TabIndex = 11;
+            // 
+            // btn_gecis
+            // 
+            this.btn_gecis.Location = new System.Drawing.Point(1115, 576);
+            this.btn_gecis.Name = "btn_gecis";
+            this.btn_gecis.Size = new System.Drawing.Size(159, 67);
+            this.btn_gecis.TabIndex = 12;
+            this.btn_gecis.Text = "Geçiş";
+            this.btn_gecis.UseVisualStyleBackColor = true;
+            this.btn_gecis.Click += new System.EventHandler(this.btn_gecis_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1302, 687);
+            this.Controls.Add(this.btn_gecis);
+            this.Controls.Add(this.flw_Extramalzemeler);
             this.Controls.Add(this.btn_siparisOnay);
             this.Controls.Add(this.lbl_toplamTutar);
             this.Controls.Add(this.label3);
@@ -214,7 +226,6 @@
             this.Controls.Add(this.cb_menu);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -222,10 +233,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -241,7 +252,6 @@
         private System.Windows.Forms.RadioButton rb_buyuk;
         private System.Windows.Forms.RadioButton rb_orta;
         private System.Windows.Forms.RadioButton rb_kucuk;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox cb_menu;
@@ -249,6 +259,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_toplamTutar;
         private System.Windows.Forms.Button btn_siparisOnay;
+        private System.Windows.Forms.FlowLayoutPanel flw_Extramalzemeler;
+        private System.Windows.Forms.Button btn_gecis;
     }
 }
 
