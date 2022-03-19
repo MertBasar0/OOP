@@ -10,9 +10,9 @@ namespace KayıtProjesi
     public static class temizle
     {
 
-        public static void GBTemizle(GroupBox Grb)
+        public static void Temizle(Control.ControlCollection kolleksiyon)
         {
-            foreach (Control item in Grb.Controls)
+            foreach (Control item in kolleksiyon)
             {
                 if (item is TextBox)
                 {
@@ -20,7 +20,7 @@ namespace KayıtProjesi
                 }
                 else if (item is ComboBox)
                 {
-                    item.Enabled = false;
+                    ((ComboBox)item).SelectedIndex = 0;
                 }
                 else if (item is MaskedTextBox)
                 {
@@ -28,7 +28,15 @@ namespace KayıtProjesi
                 }
                 else if (item is DateTimePicker)
                 {
-                    item.Enabled = false;
+                    ((DateTimePicker)item).Value = DateTime.Now;
+                }
+                else if(item is PictureBox)
+                {
+                    ((PictureBox)item).Image = null;
+                }
+                else if (item is GroupBox)
+                {
+                    Temizle(((GroupBox)item).Controls);
                 }
             }
         }

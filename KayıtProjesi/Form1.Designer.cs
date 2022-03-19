@@ -35,6 +35,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbPersonelBilgileri = new System.Windows.Forms.GroupBox();
             this.pcb_resim = new System.Windows.Forms.PictureBox();
             this.btn_sil = new System.Windows.Forms.Button();
@@ -59,6 +60,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_temizle = new System.Windows.Forms.Button();
             this.gbPersonelBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_resim)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +74,9 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
             this.lst_personel.FullRowSelect = true;
             this.lst_personel.HideSelection = false;
             this.lst_personel.Location = new System.Drawing.Point(12, 303);
@@ -80,40 +85,47 @@
             this.lst_personel.TabIndex = 3;
             this.lst_personel.UseCompatibleStateImageBehavior = false;
             this.lst_personel.View = System.Windows.Forms.View.Details;
+            this.lst_personel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lst_personel_MouseDoubleClick);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "tcKimlikNo";
-            this.columnHeader1.Width = 127;
+            this.columnHeader1.Width = 104;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Ad";
-            this.columnHeader2.Width = 105;
+            this.columnHeader2.Width = 89;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Soyad";
-            this.columnHeader3.Width = 104;
+            this.columnHeader3.Width = 91;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "İşe Giriş Tarihi";
-            this.columnHeader4.Width = 155;
+            this.columnHeader4.Width = 128;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Telefon";
-            this.columnHeader5.Width = 124;
+            this.columnHeader5.Width = 101;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Email";
-            this.columnHeader6.Width = 184;
+            this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Adres";
+            this.columnHeader7.Width = 82;
             // 
             // gbPersonelBilgileri
             // 
             this.gbPersonelBilgileri.Controls.Add(this.pcb_resim);
+            this.gbPersonelBilgileri.Controls.Add(this.btn_temizle);
             this.gbPersonelBilgileri.Controls.Add(this.btn_sil);
             this.gbPersonelBilgileri.Controls.Add(this.btn_guncelle);
             this.gbPersonelBilgileri.Controls.Add(this.btn_ekle);
@@ -148,6 +160,7 @@
             this.pcb_resim.Location = new System.Drawing.Point(333, 117);
             this.pcb_resim.Name = "pcb_resim";
             this.pcb_resim.Size = new System.Drawing.Size(142, 128);
+            this.pcb_resim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcb_resim.TabIndex = 9;
             this.pcb_resim.TabStop = false;
             // 
@@ -159,6 +172,7 @@
             this.btn_sil.TabIndex = 8;
             this.btn_sil.Text = "Sil";
             this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // btn_guncelle
             // 
@@ -168,6 +182,7 @@
             this.btn_guncelle.TabIndex = 8;
             this.btn_guncelle.Text = "Guncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_ekle
             // 
@@ -335,11 +350,26 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tc kimlik no";
             // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Ünvan";
+            this.columnHeader8.Width = 84;
+            // 
+            // btn_temizle
+            // 
+            this.btn_temizle.Location = new System.Drawing.Point(563, 252);
+            this.btn_temizle.Name = "btn_temizle";
+            this.btn_temizle.Size = new System.Drawing.Size(195, 28);
+            this.btn_temizle.TabIndex = 8;
+            this.btn_temizle.Text = "temizle";
+            this.btn_temizle.UseVisualStyleBackColor = true;
+            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 589);
+            this.ClientSize = new System.Drawing.Size(808, 589);
             this.Controls.Add(this.lst_personel);
             this.Controls.Add(this.gbPersonelBilgileri);
             this.Name = "Form1";
@@ -385,6 +415,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.Button btn_temizle;
     }
 }
 
