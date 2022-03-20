@@ -173,7 +173,7 @@ namespace KayıtProjesi
                 MessageBox.Show("Güncelleme işlemi sırasında bir hata oluştu..");
             }
 
-
+            btn_ekle.Visible = true;
         }
 
         private void btn_sil_Click(object sender, EventArgs e)
