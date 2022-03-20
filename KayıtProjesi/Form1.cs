@@ -25,8 +25,7 @@ namespace KayıtProjesi
 
         public Personel addPerson(Personel person)
         {
-            //try
-            //{
+
                 person.Name = txtAd.Text;
                 person.Surname = txtSoyad.Text;
                 person.TCKN = txtTckimlikno.Text;
@@ -53,22 +52,11 @@ namespace KayıtProjesi
             }
             else
             {
-                pcb_resim.Image = Image.FromFile(@"C:\\Users\mertb\Desktop\indir.jpg");
-                pcb_resim.Tag = Path.GetExtension(@"C:\\Users\mertb\Desktop\indir.jpg");
+                pcb_resim.Image = Image.FromFile(@"C:\\Users\lenovo\Desktop\indir.jpg");
+                pcb_resim.Tag = Path.GetExtension(@"C:\\Users\lenovo\Desktop\indir.jpg");
                 person.PersonelResmi = Guid.NewGuid() + pcb_resim.Tag.ToString();
                 pcb_resim.Image.Save(Application.StartupPath + "/Images/" + person.PersonelResmi);
             }
-               
-                    
-            //}
-            //catch (NullReferenceException)
-            //{
-            //    MessageBox.Show("Resim yüklemediniz..");
-            //}
-            //catch(Exception) 
-            //{
-            //    MessageBox.Show("Bir sorunla karşılaşıldı..");
-            //}
 
             person.Tag = person;
             return person; //Son olarak metodun, propları doldurulan person isimli nesneyi döndürmesini istedim.
@@ -95,7 +83,8 @@ namespace KayıtProjesi
         private void btn_ekle_Click(object sender, EventArgs e)
         {
             Personel personel = new Personel(); //Proplarını doldurabilmek için öncelikle nesnemi oluşturdum.
-            addPerson(personel);//Metodumla nesnemin proplarını doldurdum.
+           
+
             if (guncellenecek != null && guncellenecek.Tag == personel.Tag)/////////////////////////  HATALI   //////////////////////
             {
                 MessageBox.Show("zaten var olan bir nesneyi eklemeye çalışıyorsunuz..");
@@ -103,10 +92,11 @@ namespace KayıtProjesi
 
             else
             {
-               
+                addPerson(personel);//Metodumla nesnemin proplarını doldurdum.
                 lst_personel.Items.AddRange(listViewDoldur(personel));//ListView komponentinin Items.AddRange() metodundan yararlanarak parametre olarak ListViewItem türünde
                                                                       //array döndüren metodumu gönderdim.
                 temizle.Temizle(this.Controls);                       //Ve ekleme işleminden sonra componentleri temizledim.
+                
             }            
         }
 
@@ -156,19 +146,26 @@ namespace KayıtProjesi
             {
                 pcb_resim.Load(Application.StartupPath + "/Images/" + guncellenecek.PersonelResmi);
             }
-           
-
+            btn_ekle.Visible = false;
         }
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
             try
             {
-                guncellenecek = new Personel();
-                addPerson(guncellenecek);
-                lst_personel.Items.AddRange(listViewDoldur(guncellenecek));
-                lst_personel.Items.Remove(lst_personel.SelectedItems[0]);
-                temizle.Temizle(this.Controls);
+                if (guncellenecek != null)
+                {
+                    guncellenecek = new Personel();
+                    addPerson(guncellenecek);
+                    lst_personel.Items.AddRange(listViewDoldur(guncellenecek));
+                    lst_personel.Items.Remove(lst_personel.SelectedItems[0]);
+                    temizle.Temizle(this.Controls);
+                }
+                else
+                {
+                    MessageBox.Show("Güncellenecek öğeyi seçiniz..");
+                }
+               
             }
             catch (Exception)
             {
@@ -197,6 +194,7 @@ namespace KayıtProjesi
         private void btn_temizle_Click(object sender, EventArgs e)
         {
             temizle.Temizle(this.Controls);
+            btn_ekle.Visible = true;
         }
     }
 }
