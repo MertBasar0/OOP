@@ -84,20 +84,11 @@ namespace KayıtProjesi
         {
             Personel personel = new Personel(); //Proplarını doldurabilmek için öncelikle nesnemi oluşturdum.
            
-
-            if (guncellenecek != null && guncellenecek.Tag == personel.Tag)/////////////////////////  HATALI   //////////////////////
-            {
-                MessageBox.Show("zaten var olan bir nesneyi eklemeye çalışıyorsunuz..");
-            }
-
-            else
-            {
                 addPerson(personel);//Metodumla nesnemin proplarını doldurdum.
                 lst_personel.Items.AddRange(listViewDoldur(personel));//ListView komponentinin Items.AddRange() metodundan yararlanarak parametre olarak ListViewItem türünde
                                                                       //array döndüren metodumu gönderdim.
                 temizle.Temizle(this.Controls);                       //Ve ekleme işleminden sonra componentleri temizledim.
-                
-            }            
+                        
         }
 
 
@@ -160,6 +151,7 @@ namespace KayıtProjesi
                     lst_personel.Items.AddRange(listViewDoldur(guncellenecek));
                     lst_personel.Items.Remove(lst_personel.SelectedItems[0]);
                     temizle.Temizle(this.Controls);
+                    btn_ekle.Visible = true;
                 }
                 else
                 {
@@ -173,7 +165,7 @@ namespace KayıtProjesi
                 MessageBox.Show("Güncelleme işlemi sırasında bir hata oluştu..");
             }
 
-            btn_ekle.Visible = true;
+            
         }
 
         private void btn_sil_Click(object sender, EventArgs e)
@@ -182,6 +174,7 @@ namespace KayıtProjesi
             {
                 lst_personel.Items.Remove(lst_personel.SelectedItems[0]);
                 temizle.Temizle(this.Controls);
+                btn_ekle.Visible = true;
             }
             catch (Exception)
             {
