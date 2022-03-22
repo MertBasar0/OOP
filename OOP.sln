@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tekrar", "Tekrar", "{F35E60
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_enumm", "OOP_enumm\OOP_enumm.csproj", "{60081F84-1CE0-431C-B0C6-B634C53D78F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{669DB7DD-3913-40C0-A1E5-BD235D225FCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{60081F84-1CE0-431C-B0C6-B634C53D78F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60081F84-1CE0-431C-B0C6-B634C53D78F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60081F84-1CE0-431C-B0C6-B634C53D78F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669DB7DD-3913-40C0-A1E5-BD235D225FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669DB7DD-3913-40C0-A1E5-BD235D225FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669DB7DD-3913-40C0-A1E5-BD235D225FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669DB7DD-3913-40C0-A1E5-BD235D225FCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

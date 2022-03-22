@@ -62,9 +62,9 @@ namespace KayıtProjesi
             return person; //Son olarak metodun, propları doldurulan person isimli nesneyi döndürmesini istedim.
         }
 
-        public ListViewItem[] listViewDoldur(Personel p) //personel parametresi alıp geriye listViewItem[] listesi döndürmesini istedim..
+        public ListViewItem listViewDoldur(Personel p) //personel parametresi alıp geriye listViewItem[] listesi döndürmesini istedim..
         {
-            List<ListViewItem> vs = new List<ListViewItem>();//ListViewItem değerlerini gönderebilmek için bir genericlist oluşturdum..
+            //List<ListViewItem> vs = new List<ListViewItem>();//ListViewItem değerlerini gönderebilmek için bir genericlist oluşturdum..
             ListViewItem listItem = new ListViewItem(p.TCKN);//ListViewItem elemanlarını oluşturabilmek için bir listItem isimli nesne oluşturdum. Ve ilk değerini atadım.
 
             listItem.SubItems.Add(p.Name);//Kalan elemanları SubItems ile gönderdim.
@@ -76,8 +76,8 @@ namespace KayıtProjesi
             listItem.SubItems.Add(p.Unvan.ToString());
             listItem.Tag = p;
 
-            vs.Add(listItem); //GenericList'e listItem üzerine attığım değerleri tek seferde gönderdim.
-            return vs.ToArray();
+            //vs.Add(listItem); //GenericList'e listItem üzerine attığım değerleri tek seferde gönderdim.
+            return listItem;
         }
 
         private void btn_ekle_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace KayıtProjesi
             Personel personel = new Personel(); //Proplarını doldurabilmek için öncelikle nesnemi oluşturdum.
            
                 addPerson(personel);//Metodumla nesnemin proplarını doldurdum.
-                lst_personel.Items.AddRange(listViewDoldur(personel));//ListView komponentinin Items.AddRange() metodundan yararlanarak parametre olarak ListViewItem türünde
+                lst_personel.Items.Add(listViewDoldur(personel));//ListView komponentinin Items.AddRange() metodundan yararlanarak parametre olarak ListViewItem türünde
                                                                       //array döndüren metodumu gönderdim.
                 temizle.Temizle(this.Controls);                       //Ve ekleme işleminden sonra componentleri temizledim.
                         
@@ -146,10 +146,9 @@ namespace KayıtProjesi
             {
                 if (guncellenecek != null)
                 {
-                    guncellenecek = new Personel();
-                    addPerson(guncellenecek);
-                    lst_personel.Items.AddRange(listViewDoldur(guncellenecek));
-                    lst_personel.Items.Remove(lst_personel.SelectedItems[0]);
+                    guncellenecek = addPerson(guncellenecek);                   
+                    lst_personel.Items.RemoveAt(indexNo);
+                    lst_personel.Items.Insert(indexNo, listViewDoldur(guncellenecek));
                     temizle.Temizle(this.Controls);
                     btn_ekle.Visible = true;
                 }
