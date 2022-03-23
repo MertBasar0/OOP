@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,10 +30,6 @@ namespace Interface
             Dayaniklilik = 30
         };
 
-        Forvet fv = new Forvet() { 
-            
-            
-        };
         private void Form1_Load(object sender, EventArgs e)
         {
             listBox1.Items.Add(kl);
