@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceTekrar", "InterfaceTekrar\InterfaceTekrar.csproj", "{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferansAndValueType", "ReferansAndValueType\ReferansAndValueType.csproj", "{576483FC-9408-471F-AB64-5B9A12C1127F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struct_Seald", "Struct_Seald\Struct_Seald.csproj", "{0BF9B5D1-AD14-447F-99AD-C66B02A9B69C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +93,14 @@ Global
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576483FC-9408-471F-AB64-5B9A12C1127F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576483FC-9408-471F-AB64-5B9A12C1127F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576483FC-9408-471F-AB64-5B9A12C1127F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576483FC-9408-471F-AB64-5B9A12C1127F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BF9B5D1-AD14-447F-99AD-C66B02A9B69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BF9B5D1-AD14-447F-99AD-C66B02A9B69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BF9B5D1-AD14-447F-99AD-C66B02A9B69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BF9B5D1-AD14-447F-99AD-C66B02A9B69C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

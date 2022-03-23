@@ -38,7 +38,7 @@ namespace Encapsulation
                         foreach (Urun item in urunler)
                         {
                             listBox1.Items.Add($"{item.Id}  {item.Ad}  {item.Fiyat}");
-                        }
+                        }   
                         
 
                         foreach (Control item in groupBox1.Controls)
