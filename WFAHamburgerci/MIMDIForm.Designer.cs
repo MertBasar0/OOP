@@ -30,9 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ürünYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siparişOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siparişBilgileriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ürünYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hamburgerEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ekstraMalzemeEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,23 +58,42 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(103, 20);
             this.toolStripMenuItem1.Text = "Sipariş Yönetimi";
             // 
-            // ürünYönetimiToolStripMenuItem
-            // 
-            this.ürünYönetimiToolStripMenuItem.Name = "ürünYönetimiToolStripMenuItem";
-            this.ürünYönetimiToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.ürünYönetimiToolStripMenuItem.Text = "Ürün Yönetimi";
-            // 
             // siparişOluşturToolStripMenuItem
             // 
             this.siparişOluşturToolStripMenuItem.Name = "siparişOluşturToolStripMenuItem";
             this.siparişOluşturToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.siparişOluşturToolStripMenuItem.Text = "Sipariş Oluştur";
+            this.siparişOluşturToolStripMenuItem.Click += new System.EventHandler(this.siparişOluşturToolStripMenuItem_Click);
             // 
             // siparişBilgileriToolStripMenuItem
             // 
             this.siparişBilgileriToolStripMenuItem.Name = "siparişBilgileriToolStripMenuItem";
             this.siparişBilgileriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.siparişBilgileriToolStripMenuItem.Text = "Sipariş Bilgileri";
+            this.siparişBilgileriToolStripMenuItem.Click += new System.EventHandler(this.siparişBilgileriToolStripMenuItem_Click);
+            // 
+            // ürünYönetimiToolStripMenuItem
+            // 
+            this.ürünYönetimiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hamburgerEkleToolStripMenuItem,
+            this.ekstraMalzemeEkleToolStripMenuItem});
+            this.ürünYönetimiToolStripMenuItem.Name = "ürünYönetimiToolStripMenuItem";
+            this.ürünYönetimiToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.ürünYönetimiToolStripMenuItem.Text = "Ürün Yönetimi";
+            // 
+            // hamburgerEkleToolStripMenuItem
+            // 
+            this.hamburgerEkleToolStripMenuItem.Name = "hamburgerEkleToolStripMenuItem";
+            this.hamburgerEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hamburgerEkleToolStripMenuItem.Text = "hamburger ekle";
+            this.hamburgerEkleToolStripMenuItem.Click += new System.EventHandler(this.hamburgerEkleToolStripMenuItem_Click);
+            // 
+            // ekstraMalzemeEkleToolStripMenuItem
+            // 
+            this.ekstraMalzemeEkleToolStripMenuItem.Name = "ekstraMalzemeEkleToolStripMenuItem";
+            this.ekstraMalzemeEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ekstraMalzemeEkleToolStripMenuItem.Text = "Ekstra Malzeme Ekle";
+            this.ekstraMalzemeEkleToolStripMenuItem.Click += new System.EventHandler(this.ekstraMalzemeEkleToolStripMenuItem_Click);
             // 
             // MIMDIForm
             // 
@@ -99,5 +120,7 @@
         private System.Windows.Forms.ToolStripMenuItem siparişOluşturToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem siparişBilgileriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ürünYönetimiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hamburgerEkleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ekstraMalzemeEkleToolStripMenuItem;
     }
 }

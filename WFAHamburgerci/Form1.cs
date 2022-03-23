@@ -53,7 +53,7 @@ namespace WFAHamburgerci
             }
             else if(rb_orta.Checked)
             {
-                s.Boyutu = BoyutEnum.Orta; 
+                s.Boyutu = BoyutEnum.Orta;
             }
             else
             {
@@ -126,12 +126,14 @@ namespace WFAHamburgerci
                 MessageBox.Show("Sipariş Tamamlandı.." + ToplamTutar());
                 MevcutSiparisler.Clear();
                 lst_siparisler.Items.Clear();
+                lbl_toplamTutar.Text = "0";
             }
             else
             {      
                 MessageBox.Show("Siparişiniz iptal edildi..");
                 MevcutSiparisler.Clear();
                 lst_siparisler.Items.Clear();
+                lbl_toplamTutar.Text = "0";
             }
         }
 

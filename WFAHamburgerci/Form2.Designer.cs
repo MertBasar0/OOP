@@ -46,7 +46,7 @@
             this.grb_menuBilgileri.Controls.Add(this.txt_menuAdi);
             this.grb_menuBilgileri.Controls.Add(this.label2);
             this.grb_menuBilgileri.Controls.Add(this.label1);
-            this.grb_menuBilgileri.Location = new System.Drawing.Point(13, 12);
+            this.grb_menuBilgileri.Location = new System.Drawing.Point(0, -2);
             this.grb_menuBilgileri.Name = "grb_menuBilgileri";
             this.grb_menuBilgileri.Size = new System.Drawing.Size(407, 242);
             this.grb_menuBilgileri.TabIndex = 0;
@@ -109,10 +109,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1031, 497);
+            this.ClientSize = new System.Drawing.Size(409, 241);
             this.Controls.Add(this.grb_menuBilgileri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
             this.grb_menuBilgileri.ResumeLayout(false);
             this.grb_menuBilgileri.PerformLayout();

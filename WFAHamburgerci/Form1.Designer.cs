@@ -53,7 +53,7 @@
             // lst_siparisler
             // 
             this.lst_siparisler.FormattingEnabled = true;
-            this.lst_siparisler.Location = new System.Drawing.Point(460, 12);
+            this.lst_siparisler.Location = new System.Drawing.Point(454, 1);
             this.lst_siparisler.Name = "lst_siparisler";
             this.lst_siparisler.Size = new System.Drawing.Size(830, 394);
             this.lst_siparisler.TabIndex = 0;
@@ -61,7 +61,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(442, 206);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +187,7 @@
             // 
             // btn_siparisOnay
             // 
-            this.btn_siparisOnay.Location = new System.Drawing.Point(1102, 453);
+            this.btn_siparisOnay.Location = new System.Drawing.Point(1097, 423);
             this.btn_siparisOnay.Name = "btn_siparisOnay";
             this.btn_siparisOnay.Size = new System.Drawing.Size(187, 35);
             this.btn_siparisOnay.TabIndex = 10;
@@ -204,7 +204,7 @@
             // 
             // btn_gecis
             // 
-            this.btn_gecis.Location = new System.Drawing.Point(1115, 576);
+            this.btn_gecis.Location = new System.Drawing.Point(1125, 492);
             this.btn_gecis.Name = "btn_gecis";
             this.btn_gecis.Size = new System.Drawing.Size(159, 67);
             this.btn_gecis.TabIndex = 12;
@@ -216,7 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 687);
+            this.ClientSize = new System.Drawing.Size(1289, 644);
             this.Controls.Add(this.btn_gecis);
             this.Controls.Add(this.flw_Extramalzemeler);
             this.Controls.Add(this.btn_siparisOnay);
@@ -232,6 +232,7 @@
             this.Controls.Add(this.lst_siparisler);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

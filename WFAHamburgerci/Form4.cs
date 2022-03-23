@@ -33,8 +33,8 @@ namespace WFAHamburgerci
             }
 
             lblCiro.Text =ciro.ToString();
-            lbl_toplamSiparis.Text = lst_siparisler.Items.Count.ToString();
-            lbl_ExtraMalzemeler.Text =exMalzemeGeliri.ToString();
+            lbl_toplamSiparis.Text = lst_siparisler.Items.Count.ToString("C2");
+            lbl_ExtraMalzemeler.Text =exMalzemeGeliri.ToString("C2");
             lbl_SatilanURunAdedi.Text =satisAdedi.ToString();
 
             foreach (Siparis item in Form1.EskiSiparisler)

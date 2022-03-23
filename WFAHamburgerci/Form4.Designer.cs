@@ -48,7 +48,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblCiro);
-            this.groupBox1.Location = new System.Drawing.Point(714, 12);
+            this.groupBox1.Location = new System.Drawing.Point(714, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(367, 137);
             this.groupBox1.TabIndex = 0;
@@ -120,7 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Location = new System.Drawing.Point(1, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 1;
@@ -129,7 +129,7 @@
             // lst_siparisler
             // 
             this.lst_siparisler.FormattingEnabled = true;
-            this.lst_siparisler.Location = new System.Drawing.Point(15, 60);
+            this.lst_siparisler.Location = new System.Drawing.Point(4, 25);
             this.lst_siparisler.Name = "lst_siparisler";
             this.lst_siparisler.Size = new System.Drawing.Size(653, 537);
             this.lst_siparisler.TabIndex = 2;
@@ -157,6 +157,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox1.ResumeLayout(false);
