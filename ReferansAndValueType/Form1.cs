@@ -17,14 +17,14 @@ namespace ReferansAndValueType
             InitializeComponent();
         }
 
-        //.NET frameworkünde uygulama üzerinde geçici olarak kullanılan nesneler ram üzerinde tutulur. Ram teknik yapısı itibari ile nesnelerin iki farklı
+        //.NET frameworkünde uygulama üzerinde geçici olarak kullanılan nesneler ram üzerinde tutulur. Ram teknik yapısı itibariyle nesnelerin iki farklı
         //kullanımda tutulduğu görülmektedir. Bunlardan bir tanesi stack diğeri heap'dir.
 
         //Stack bölümü "value type" olarak adlandırdığımız değer tipleri tutar.(string hariç tüm değişkenler, enum, struct)
 
         //Heap bölümünde "reference type" olarak adlandırdığımız tipler bulunuyor.(class, string, array, delegate)
 
-        //Value tipler değerlerini kopyalayabilme özelliğine sahipken, reference tiplerde bu iş taşıma olarak gözlemlenmektedir.
+        //Value tipler değerlerini kopyalayabilme özelliğine sahipken, reference tiplerde bu iş taşıma olarak gözlenmektedir.
 
         //Bir değerin null olması reference tipler için, o değerin heap bölümünde bir karşılığı yok demektir.
 
@@ -93,6 +93,7 @@ namespace ReferansAndValueType
 
             MessageBox.Show(ogr.Adi);
             MessageBox.Show(ogr.GetHashCode() + "\n" + ogr_2.GetHashCode());
+
             //Hash int tipinde sayısal benzersiz bir değerdir. Int tipinde
             //benzersiz bir değer olmasından dolayı nesnelerimizin anahtarı
             //niteliğindedir.
