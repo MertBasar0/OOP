@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceTekrar", "InterfaceTekrar\InterfaceTekrar.csproj", "{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceTekrarınTekrarı", "InterfaceTekrarınTekrarı\InterfaceTekrarınTekrarı.csproj", "{B6211347-6B28-4045-A95B-450D7F93BCCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6211347-6B28-4045-A95B-450D7F93BCCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6211347-6B28-4045-A95B-450D7F93BCCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6211347-6B28-4045-A95B-450D7F93BCCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6211347-6B28-4045-A95B-450D7F93BCCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +102,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{60081F84-1CE0-431C-B0C6-B634C53D78F9} = {F35E6020-1CE7-4741-9866-901E4B01F82F}
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC} = {F35E6020-1CE7-4741-9866-901E4B01F82F}
+		{B6211347-6B28-4045-A95B-450D7F93BCCB} = {F35E6020-1CE7-4741-9866-901E4B01F82F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13D95649-9086-43CB-BE99-7E01C5B431BE}
