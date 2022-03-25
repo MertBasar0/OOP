@@ -42,10 +42,9 @@ namespace Inheritance
             {
                 a += item.Name+": "+item.GetValue(ph).ToString()+"\n";
             }
-            MessageBox.Show(a);
+            MessageBox.Show(ph.VideoCall());
 
 
-            3.55
         }
     }
 }

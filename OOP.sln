@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struct_Seald", "Struct_Seal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{1B7F5AF4-56E2-44B4-8988-C62CBCD83683}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saled", "Saled\Saled.csproj", "{03299FE4-6C12-4B71-A234-2DCFF4E82D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Static", "Static\Static.csproj", "{D3B65357-D2C4-4A82-B383-A88D5F9BDD2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +117,14 @@ Global
 		{1B7F5AF4-56E2-44B4-8988-C62CBCD83683}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B7F5AF4-56E2-44B4-8988-C62CBCD83683}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B7F5AF4-56E2-44B4-8988-C62CBCD83683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03299FE4-6C12-4B71-A234-2DCFF4E82D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03299FE4-6C12-4B71-A234-2DCFF4E82D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03299FE4-6C12-4B71-A234-2DCFF4E82D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03299FE4-6C12-4B71-A234-2DCFF4E82D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B65357-D2C4-4A82-B383-A88D5F9BDD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B65357-D2C4-4A82-B383-A88D5F9BDD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B65357-D2C4-4A82-B383-A88D5F9BDD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B65357-D2C4-4A82-B383-A88D5F9BDD2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
