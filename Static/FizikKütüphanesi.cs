@@ -19,6 +19,20 @@ namespace Static
 
     public static class FizikKütüphanesi
     {
-        //58.52
+        public static decimal YercekimiKuvveti { get { return 9.80665M; } }
+
+        //Const => Sabit değer.. Kendiliğinden static olma özelliğine sahiptir. Dolayısıyla static olarak işaretlenemez..
+
+        public const int KaldirmaKuvveti = 12;
+
+        //ReadOnly => Sadece okunabilir değişkenler oluşturmak için kullanılan anahtar kelimedir.
+
+        public static readonly decimal TestKuvveti = 2;  //static olarak işaretlenmediğinde static class içinde barındırılamaz..
+
+
+        public static void Test()
+        {
+
+        }
     }
 }

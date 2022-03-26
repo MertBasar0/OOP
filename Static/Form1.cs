@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Math;  BU şekilde math sınıfının içinde bulunan bütün memberlara ulaşılabilir.
 
 namespace Static
 {
@@ -20,7 +21,9 @@ namespace Static
 
         private void btn_temizle_Click(object sender, EventArgs e)
         {
-            ExtensionMethod.KarekterTemizle(textBox1);
+            //ExtensionMethod.KarekterTemizle(textBox1);
+
+            MessageBox.Show(FizikKütüphanesi.YercekimiKuvveti.ToString());
         }
     }
 
