@@ -27,7 +27,7 @@ namespace Polymorphizm
         {
             SoundPlayer soundPlayer = new SoundPlayer();
 
-            soundPlayer.SoundLocation= @"C:\Users\Lenovo\source\repos\OOP\Polymorphizm\bin\Debug\Sounds\default.wav";
+            soundPlayer.SoundLocation = Environment.CurrentDirectory + "\\Sounds\\default.wav";
 
             soundPlayer.Play();
         }
