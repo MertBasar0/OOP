@@ -12,7 +12,7 @@ namespace Polymorphizm
         public override void CallSound()
         {
             SoundPlayer soundPlayer = new SoundPlayer();
-            soundPlayer.SoundLocation = @"C:\Users\Lenovo\source\repos\OOP\Polymorphizm\bin\Debug\Sounds\samsung.wav";
+            soundPlayer.SoundLocation = Environment.CurrentDirectory + "\\Sounds\\samsung.wav"; ;
             soundPlayer.Play();
         }
     }
