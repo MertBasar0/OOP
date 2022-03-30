@@ -16,6 +16,8 @@ namespace _enum
         {
             InitializeComponent();
         }
+        //Enum.Parse() fonsiyonu çağırılır ve int bir değişkene atanırsa seçili enumun
+        //index değerini elde edebilirsiniz.
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -29,8 +31,31 @@ namespace _enum
             p.AdSoyad = txt_Ad.Text;
             p.Departman = (Departmanlar)Enum.Parse(typeof(Departmanlar), cmb_depart.Text);
 
+            int seciliEnumIndex = (int)Enum.Parse(typeof(Departmanlar),cmb_depart.Text);
 
-            MessageBox.Show(p.ToString());
+            Departmanlar Cikacak;
+            bool sonuc = Enum.TryParse<Departmanlar>(cmb_depart.Text, out Cikacak);
+
+            if (sonuc)
+            {
+                switch (p.Departman)
+                {
+                    case Departmanlar.Yazilim:
+                        MessageBox.Show("Hoşgeldin yazılımcı");
+                        break;
+                    case Departmanlar.GrafikTasarim:
+                        MessageBox.Show("Hoşgeldin tasarımcı");
+                        break;
+                    case Departmanlar.InsanKaynaklari:
+                        MessageBox.Show("hoşgeldin ik'cı");
+                        break;
+                    case Departmanlar.Muhasebe:
+                        MessageBox.Show("Hoşgeldin Muhasebeci");
+                        break;
+                }
+                MessageBox.Show("Personel departmani =>"+Cikacak.ToString()+" "+seciliEnumIndex.ToString());
+            }
+           
         }
     }
 }
