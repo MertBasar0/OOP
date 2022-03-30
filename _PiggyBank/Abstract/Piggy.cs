@@ -47,8 +47,6 @@ namespace _PiggyBank.Abstract
             decimal _total = 0;
             foreach (IMoney money in TotalMoney)
             {
-
-
                 _total += money.CalculateArea();
             }
             if (Capacity <= _total)
@@ -115,15 +113,21 @@ namespace _PiggyBank.Abstract
 
         public void ShakePiggy()
         {
-            //decimal _totalAir = 0;
-            //decimal _totalMinAir = 0;
-            //foreach (IMoney item in TotalMoney)
-            //{
-            //    Capacity -= item.Air;
-            //    _totalMinAir += item.MinAir;
-            //}
-            //Capacity -
+            foreach (IMoney item in TotalMoney)
+            {
+                item.Air = item.MinAir;
+            }
         }
 
+
+        public void ShowAir(Label lbl)
+        {
+            decimal _totalAir = 0;
+            foreach(IMoney item in TotalMoney)
+            {
+                _totalAir +=item.Air;
+            }
+            lbl.Text = _totalAir.ToString();
+        }
     }
 }

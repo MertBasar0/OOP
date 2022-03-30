@@ -23,26 +23,22 @@ namespace _PiggyBank
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //comboBox1.Items.AddRange(Enum.GetNames(typeof(MoneyEnums)));
             comboBox1.Items.AddRange(pg.StartPiggy().ToArray());
         }
 
 
         private void btn_kaydet_Click(object sender, EventArgs e)
         {
-            Banknot Money = comboBox1.SelectedItem as Banknot;
-
-            //Coin Coin = comboBox1.SelectedItem as Coin;
+            IMoney Money = comboBox1.SelectedItem as IMoney;
 
             if (comboBox1.SelectedItem != null)
             {
-                //string b = Enum.Parse(typeof(MoneyEnums), comboBox1.Text).ToString();
 
-                Money = new Banknot();
+                IMoney Clonemoney = Money.Clone();
 
-                Money.CalculateAir();
+                Clonemoney.CalculateAir();
 
-                list.Add(Money);
+                list.Add(Clonemoney);
 
                 pg.TotalMoney = list;
 
@@ -50,20 +46,7 @@ namespace _PiggyBank
 
                 pg.ControlCapacity();
 
-                //else if (Coin.GetType() == typeof(Coin))
-                //{
-                //    Coin = new Coin();
-
-                //    Coin.CalculateAir();
-
-                //    list.Add(Coin);
-
-                //    pg.TotalMoney = list;
-
-                //    MessageBox.Show(pg.ControlCash().ToString("C"));
-
-                //    pg.ControlCapacity();
-                //}
+                pg.ShowAir(lbl_air);
             }
 
         }
@@ -75,7 +58,8 @@ namespace _PiggyBank
 
         private void btn_Shake_Click(object sender, EventArgs e)
         {
-
+            pg.ShakePiggy();
+            pg.ShowAir(lbl_air);
         }
     }
 }

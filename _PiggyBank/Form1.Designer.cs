@@ -33,6 +33,7 @@
             this.btn_Shake = new System.Windows.Forms.Button();
             this.btn_kaydet = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lbl_air = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -82,11 +83,20 @@
             this.comboBox1.Size = new System.Drawing.Size(173, 21);
             this.comboBox1.TabIndex = 4;
             // 
+            // lbl_air
+            // 
+            this.lbl_air.AutoSize = true;
+            this.lbl_air.Location = new System.Drawing.Point(279, 34);
+            this.lbl_air.Name = "lbl_air";
+            this.lbl_air.Size = new System.Drawing.Size(0, 13);
+            this.lbl_air.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 439);
+            this.Controls.Add(this.lbl_air);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btn_Break);
             this.Controls.Add(this.btn_Shake);
@@ -96,6 +106,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -106,6 +117,7 @@
         private System.Windows.Forms.Button btn_Shake;
         private System.Windows.Forms.Button btn_kaydet;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lbl_air;
     }
 }
 

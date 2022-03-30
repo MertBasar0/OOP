@@ -18,5 +18,7 @@ namespace _PiggyBank.Abstract
 
         decimal CalculateAir();
 
+        IMoney Clone();
+
     }
 }

@@ -35,7 +35,6 @@ namespace _PiggyBank.Abstract
 
         public decimal CalculateArea()
         {
-
             return (PiConsts.Pi * R_Pow * H) + Air;
         }
 
@@ -45,5 +44,9 @@ namespace _PiggyBank.Abstract
             return GetType().Name;
         }
 
+        public IMoney Clone()
+        {
+            return (IMoney)MemberwiseClone();
+        }
     }
 }

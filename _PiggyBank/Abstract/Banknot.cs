@@ -18,7 +18,7 @@ namespace _PiggyBank.Abstract
 
         public Banknot()
         {
-            //asga
+
         }
 
         public decimal CalculateAir()
@@ -43,5 +43,9 @@ namespace _PiggyBank.Abstract
             return GetType().Name;
         }
 
+        public IMoney Clone()
+        {
+            return (IMoney)MemberwiseClone();
+        }
     }
 }
