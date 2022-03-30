@@ -16,7 +16,7 @@ namespace PiggyBank
         
 
 
-        public decimal Capacity { get; } = 60.00M;
+        public decimal Capacity { get; } = 6000.00M;
 
         public decimal CashValue { get; set; }
 
@@ -36,6 +36,7 @@ namespace PiggyBank
                 else
                 {
                     MessageBox.Show("Kumbara artık yapıştırılamaz..");
+                    BreakCount = 0;
                 }
                 
             }
@@ -47,13 +48,16 @@ namespace PiggyBank
             decimal _total = 0;
             foreach (IMoney money in TotalMoney)
             {
+                
+
                 _total += money.CalculateArea();
             }
-            if (Capacity == _total)
+            if (Capacity <= _total)
             {
-                BreakCount++;
-                PiggyBreak();
                 MessageBox.Show("Kumbara doldu");
+
+                PiggyBreak();
+
                 return true;
             }
             else
@@ -61,6 +65,7 @@ namespace PiggyBank
                 return false;
             }
         }
+
 
         public decimal ControlCash()
         {
@@ -72,17 +77,21 @@ namespace PiggyBank
             CashValue = _total;
             return _total;
         }
+
+
         public void PiggyBreak()
         {
             MessageBox.Show($"{CashValue} tl para biriktirdiniz..");
             CashValue = 0;
             TotalMoney.Clear();
+            BreakCount ++;
             if (BreakCount == 2)
             {
                 ShakeCount = 0;
                 BreakCount = 0;
             }
         }
+
 
         public List<IMoney> StartPiggy()
         {
@@ -105,6 +114,17 @@ namespace PiggyBank
         }
 
 
+        public void ShakePiggy()
+        {
+            //decimal _totalAir = 0;
+            //decimal _totalMinAir = 0;
+            //foreach (IMoney item in TotalMoney)
+            //{
+            //    Capacity -= item.Air;
+            //    _totalMinAir += item.MinAir;
+            //}
+            //Capacity -
+        }
         
     }
 }

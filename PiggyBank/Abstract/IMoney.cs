@@ -11,8 +11,12 @@ namespace PiggyBank
         decimal Amount { get; set; }
         decimal Weight { get; set; }
         decimal H { get; set; }
+        decimal MinAir { get; set; }
+        decimal Air { get; set; }
 
         decimal CalculateArea();
+
+        decimal CalculateAir();
 
     }
 }
