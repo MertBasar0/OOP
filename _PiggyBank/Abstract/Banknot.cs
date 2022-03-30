@@ -18,7 +18,7 @@ namespace _PiggyBank.Abstract
 
         public Banknot()
         {
-
+            //asga
         }
 
         public decimal CalculateAir()
