@@ -27,7 +27,6 @@ namespace InterfaceTekrarınTekrarı
             Dayanılılık = 3,
             SutGucu = 1,
             MilliMi = true,
-
         };
 
         Defans df = new Defans()
@@ -82,7 +81,7 @@ namespace InterfaceTekrarınTekrarı
             {
                 IFutbolcu ft = listBox1.SelectedItem as IFutbolcu;
                 flowLayoutPanel1.Controls.Clear();
-                foreach (PropertyInfo item in listBox1.SelectedItem.GetType().GetInterface("IFutbolcu").GetProperties())
+                foreach (PropertyInfo item in ft.GetType().GetInterface("IFutbolcu").GetProperties())
                 {
                     Label lb = new Label();
                     lb.Text = item.Name+" "+ item.GetValue(ft);
