@@ -3,14 +3,24 @@
     partial class Form1
     {
         /// <summary>
+<<<<<<< HEAD
+        ///Gerekli tasarımcı değişkeni.
+=======
         /// Required designer variable.
+>>>>>>> f3245bfc95135a042cd9fa98e0b1c9641c69cc0f
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
+<<<<<<< HEAD
+        ///Kullanılan tüm kaynakları temizleyin.
+        /// </summary>
+        ///<param name="disposing">yönetilen kaynaklar dispose edilmeliyse doğru; aksi halde yanlış.</param>
+=======
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+>>>>>>> f3245bfc95135a042cd9fa98e0b1c9641c69cc0f
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,6 +30,23 @@
             base.Dispose(disposing);
         }
 
+<<<<<<< HEAD
+        #region Windows Form Designer üretilen kod
+
+        /// <summary>
+        /// Tasarımcı desteği için gerekli metot - bu metodun 
+        ///içeriğini kod düzenleyici ile değiştirmeyin.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Form1";
+        }
+
+        #endregion
+=======
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -106,6 +133,7 @@
         private System.Windows.Forms.Button btn_Break;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btn_Shake;
+>>>>>>> f3245bfc95135a042cd9fa98e0b1c9641c69cc0f
     }
 }
 

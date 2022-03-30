@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+﻿using System;
+=======
 ﻿using PiggyBank.Coins;
 using System;
+>>>>>>> f3245bfc95135a042cd9fa98e0b1c9641c69cc0f
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +12,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
 using PiggyBank.Banknots;
 using PiggyBank.Concrate.Enums;
+>>>>>>> f3245bfc95135a042cd9fa98e0b1c9641c69cc0f
 
 namespace PiggyBank
 {
@@ -18,6 +25,8 @@ namespace PiggyBank
         public Form1()
         {
             InitializeComponent();
+<<<<<<< HEAD
+=======
             
         }
         Piggy pg = new Piggy();
@@ -77,6 +86,7 @@ namespace PiggyBank
         private void btn_Shake_Click(object sender, EventArgs e)
         {
 
+>>>>>>> f3245bfc95135a042cd9fa98e0b1c9641c69cc0f
         }
     }
 }
