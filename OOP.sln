@@ -49,11 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_enum", "_enum\_enum.csproj", "{C896D71A-DCB0-41EB-ACEB-DF1206FC2090}"
 EndProject
-<<<<<<< HEAD
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_PiggyBank", "_PiggyBank\_PiggyBank.csproj", "{57881543-F2AA-40B0-BF91-B18BD5243667}"
 EndProject
->>>>>>> 2995c0d3565660ff60dbd32e3aadc579312ee1d6
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayitProjesiTekrar", "KayitProjesiTekrar\KayitProjesiTekrar.csproj", "{D4492B08-5611-4A55-9E5B-5B05853339CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -148,13 +147,14 @@ Global
 		{C896D71A-DCB0-41EB-ACEB-DF1206FC2090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C896D71A-DCB0-41EB-ACEB-DF1206FC2090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C896D71A-DCB0-41EB-ACEB-DF1206FC2090}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-=======
 		{57881543-F2AA-40B0-BF91-B18BD5243667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{57881543-F2AA-40B0-BF91-B18BD5243667}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57881543-F2AA-40B0-BF91-B18BD5243667}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57881543-F2AA-40B0-BF91-B18BD5243667}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> 2995c0d3565660ff60dbd32e3aadc579312ee1d6
+		{D4492B08-5611-4A55-9E5B-5B05853339CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4492B08-5611-4A55-9E5B-5B05853339CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4492B08-5611-4A55-9E5B-5B05853339CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4492B08-5611-4A55-9E5B-5B05853339CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,6 +163,7 @@ Global
 		{60081F84-1CE0-431C-B0C6-B634C53D78F9} = {F35E6020-1CE7-4741-9866-901E4B01F82F}
 		{E66A07F6-7169-4EC1-9D6A-3DE92A29BFBC} = {F35E6020-1CE7-4741-9866-901E4B01F82F}
 		{B6211347-6B28-4045-A95B-450D7F93BCCB} = {F35E6020-1CE7-4741-9866-901E4B01F82F}
+		{D4492B08-5611-4A55-9E5B-5B05853339CE} = {F35E6020-1CE7-4741-9866-901E4B01F82F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13D95649-9086-43CB-BE99-7E01C5B431BE}
