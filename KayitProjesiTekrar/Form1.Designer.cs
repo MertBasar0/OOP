@@ -30,6 +30,7 @@
         {
             this.gb_personelBilgileri = new System.Windows.Forms.GroupBox();
             this.btn_guncelle = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_sil = new System.Windows.Forms.Button();
             this.btn_resimSec = new System.Windows.Forms.Button();
             this.btn_ekle = new System.Windows.Forms.Button();
@@ -66,6 +67,7 @@
             // gb_personelBilgileri
             // 
             this.gb_personelBilgileri.Controls.Add(this.btn_guncelle);
+            this.gb_personelBilgileri.Controls.Add(this.button1);
             this.gb_personelBilgileri.Controls.Add(this.btn_sil);
             this.gb_personelBilgileri.Controls.Add(this.btn_resimSec);
             this.gb_personelBilgileri.Controls.Add(this.btn_ekle);
@@ -90,7 +92,7 @@
             this.gb_personelBilgileri.Controls.Add(this.label1);
             this.gb_personelBilgileri.Location = new System.Drawing.Point(12, 12);
             this.gb_personelBilgileri.Name = "gb_personelBilgileri";
-            this.gb_personelBilgileri.Size = new System.Drawing.Size(776, 231);
+            this.gb_personelBilgileri.Size = new System.Drawing.Size(776, 262);
             this.gb_personelBilgileri.TabIndex = 0;
             this.gb_personelBilgileri.TabStop = false;
             this.gb_personelBilgileri.Text = "Personel Bilgileri";
@@ -103,6 +105,17 @@
             this.btn_guncelle.TabIndex = 8;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(621, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Temizle";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_sil
             // 
@@ -112,6 +125,7 @@
             this.btn_sil.TabIndex = 8;
             this.btn_sil.Text = "Sil";
             this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // btn_resimSec
             // 
@@ -298,43 +312,51 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 249);
+            this.listView1.Location = new System.Drawing.Point(12, 280);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(776, 189);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "TCKN";
+            this.columnHeader1.Width = 120;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Ad";
+            this.columnHeader2.Width = 120;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Soyad";
+            this.columnHeader3.Width = 120;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "İşe giriş";
+            this.columnHeader4.Width = 120;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Telefon";
+            this.columnHeader5.Width = 120;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Mail";
+            this.columnHeader6.Width = 120;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 481);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.gb_personelBilgileri);
             this.Name = "Form1";
@@ -380,6 +402,7 @@
         private System.Windows.Forms.Button btn_sil;
         private System.Windows.Forms.Button btn_resimSec;
         private System.Windows.Forms.Button btn_ekle;
+        private System.Windows.Forms.Button button1;
     }
 }
 

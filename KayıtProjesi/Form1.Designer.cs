@@ -36,8 +36,10 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbPersonelBilgileri = new System.Windows.Forms.GroupBox();
             this.pcb_resim = new System.Windows.Forms.PictureBox();
+            this.btn_temizle = new System.Windows.Forms.Button();
             this.btn_sil = new System.Windows.Forms.Button();
             this.btn_guncelle = new System.Windows.Forms.Button();
             this.btn_ekle = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_temizle = new System.Windows.Forms.Button();
             this.gbPersonelBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_resim)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +122,11 @@
             this.columnHeader7.Text = "Adres";
             this.columnHeader7.Width = 82;
             // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Ünvan";
+            this.columnHeader8.Width = 84;
+            // 
             // gbPersonelBilgileri
             // 
             this.gbPersonelBilgileri.Controls.Add(this.pcb_resim);
@@ -163,6 +168,16 @@
             this.pcb_resim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcb_resim.TabIndex = 9;
             this.pcb_resim.TabStop = false;
+            // 
+            // btn_temizle
+            // 
+            this.btn_temizle.Location = new System.Drawing.Point(563, 252);
+            this.btn_temizle.Name = "btn_temizle";
+            this.btn_temizle.Size = new System.Drawing.Size(195, 28);
+            this.btn_temizle.TabIndex = 8;
+            this.btn_temizle.Text = "temizle";
+            this.btn_temizle.UseVisualStyleBackColor = true;
+            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // btn_sil
             // 
@@ -214,6 +229,7 @@
             // 
             // cmb_Unvan
             // 
+            this.cmb_Unvan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Unvan.FormattingEnabled = true;
             this.cmb_Unvan.Location = new System.Drawing.Point(559, 81);
             this.cmb_Unvan.Name = "cmb_Unvan";
@@ -349,21 +365,6 @@
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tc kimlik no";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Ünvan";
-            this.columnHeader8.Width = 84;
-            // 
-            // btn_temizle
-            // 
-            this.btn_temizle.Location = new System.Drawing.Point(563, 252);
-            this.btn_temizle.Name = "btn_temizle";
-            this.btn_temizle.Size = new System.Drawing.Size(195, 28);
-            this.btn_temizle.TabIndex = 8;
-            this.btn_temizle.Text = "temizle";
-            this.btn_temizle.UseVisualStyleBackColor = true;
-            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // Form1
             // 

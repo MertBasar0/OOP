@@ -29,6 +29,10 @@ namespace KayitProjesiTekrar.Constrat
                 {
                     ((MaskedTextBox)item).Text = "";
                 }
+                else if(item is PictureBox)
+                {
+                    ((PictureBox)item).Image = null;
+                }
             }
         }
     }

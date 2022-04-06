@@ -18,22 +18,23 @@ namespace KayitProjesiTekrar
         {
             InitializeComponent();
         }
-        Employee e;
         ListViewItem list;
+        int index = 0;
+        Employee guncellenecek;
 
-        public Employee AddEmployee()
+
+        public Employee AddEmployee(Employee e)
         {
-            e = new Employee()
-            {
-                TCKN = txt_tckn.Text,
-                Name = txt_ad.Text,
-                Surname = txt_soyad.Text,
-                Birthdate = dtp_dogumT.Value,
-                Tel = txt_tel.Text,
-                Mail = txt_mail.Text,
-                Adres = txt_adres.Text,
-                Title = (Unvan)Enum.Parse(typeof(Unvan), cmb_unvan.Text)
-            };
+
+            e.TCKN = txt_tckn.Text;
+            e.Name = txt_ad.Text;
+            e.Surname = txt_soyad.Text;
+            e.Birthdate = dtp_dogumT.Value;
+            e.Tel = txt_tel.Text;
+            e.Mail = txt_mail.Text;
+            e.Adres = txt_adres.Text;
+            e.Title = (Unvan)Enum.Parse(typeof(Unvan), cmb_unvan.Text);
+            e.WorkStartDate = dtp_iseGiris.Value;
             if (picEmployee.Image != null)
             {
                 e.Pic = Guid.NewGuid().ToString()+ picEmployee.Tag;
@@ -41,7 +42,6 @@ namespace KayitProjesiTekrar
             }
             return e;
         }
-        //Güncelle ve sil butonları yazılacak..
         public ListViewItem AddList(Employee e)
         {
             list = new ListViewItem(e.TCKN);
@@ -75,8 +75,47 @@ namespace KayitProjesiTekrar
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
-            listView1.Items.Add(AddList(AddEmployee()));
+            Employee employee = new Employee();
+            listView1.Items.Add(AddList(AddEmployee(employee)));
             Temizle.FormTemizle(gb_personelBilgileri.Controls);
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            index = listView1.SelectedItems[0].Index;
+            guncellenecek = (Employee)listView1.SelectedItems[0].Tag;
+
+            txt_ad.Text = guncellenecek.Name;
+            txt_soyad.Text = guncellenecek.Surname;
+            txt_tckn.Text = guncellenecek.TCKN;
+            dtp_dogumT.Value = guncellenecek.Birthdate;
+            txt_tel.Text = guncellenecek.Tel;
+            txt_adres.Text = guncellenecek.Adres;
+            txt_mail.Text = guncellenecek.Mail;
+            dtp_iseGiris.Value = guncellenecek.WorkStartDate;
+            cmb_unvan.Text = guncellenecek.Title.ToString();
+
+            if (!string.IsNullOrWhiteSpace(guncellenecek.Pic))
+            {
+                picEmployee.Image = Image.FromFile(Application.StartupPath + "/Image/" + guncellenecek.Pic);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Temizle.FormTemizle(gb_personelBilgileri.Controls);
+        }
+
+        private void btn_guncelle_Click(object sender, EventArgs e)
+        {
+            listView1.Items.RemoveAt(index);
+            listView1.Items.Insert(index, AddList(AddEmployee(guncellenecek)));
+            Temizle.FormTemizle(gb_personelBilgileri.Controls);
+        }
+
+        private void btn_sil_Click(object sender, EventArgs e)
+        {
+            listView1.Items.RemoveAt(index);
         }
     }
 }
