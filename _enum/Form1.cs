@@ -16,6 +16,18 @@ namespace _enum
         {
             InitializeComponent();
         }
+        //ENUM
+        //Kişilere sabit seçenekler sulmak için kullanılan bir değer tiptir. Seçenekleri kontrol altında tutup uygulamanızın güvenliğini sağlar. Uygulamayı kendi
+        //kontrolünüzde yürütebilirsiniz. Bu sebeple uygulama içerisinde herhangi bir sürprize yer bırakmadan çok performanslı ve cok daha güvenli bir yapı oluşturmuş olur.
+
+        //Enumlar tamamen geliştiriciye yönelik nesnelerdir.
+        //Bir enum 'un yazı değerini teslim etmek için kullanılan metot Enum.GetNames() metodudur.
+        //Metinsel ya da sayısal ifade olarak tanımlanan enumu nesne olarak almak için Enum.Parse() metodu kullanılır.
+
+        //Bir enum arka planda sayısal değer tutar. Bu değerler varsayılan olarak secilen değerin index değeridir.ve tipleri int dır.
+        //Ancak siz int olarak çok aşırı yer tutuğunu düşünürseniz bunu değiştirebilirsiniz.(stbyte, byte, short, ushort, uint) yada istediğiniz değerden başlatmanız mümkündür.
+        //İlk eleman 5. indexden başlasın gerisi otomatik devam etsin diyebilirsiniz. İstersen bütün enumlara manuel olarak tek tek değer atamasıda yapabilirsiniz.
+
         //Enum.Parse() fonsiyonu çağırılır ve int bir değişkene atanırsa seçili enumun
         //index değerini elde edebilirsiniz.
 
