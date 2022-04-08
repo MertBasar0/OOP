@@ -3,23 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP(CTOR)", "OOP\OOP(CTOR).csproj", "{6BB4377E-A645-482F-A29E-2D0823235BAB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "(CTOR)", "OOP\(CTOR).csproj", "{6BB4377E-A645-482F-A29E-2D0823235BAB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapsulation", "Encapsulation\Encapsulation.csproj", "{93AA7F21-8E5B-4F69-A1C9-854CD06D24D8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayıtProjesi", "KayıtProjesi\KayıtProjesi.csproj", "{CE1C8D7D-CCF7-455F-9331-83887D92FAF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Delegate", "OOP_Delegate\OOP_Delegate.csproj", "{E80C71C2-C328-4957-ACF2-11D0784D0387}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "OOP_Delegate\Delegate.csproj", "{E80C71C2-C328-4957-ACF2-11D0784D0387}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHandler", "EventHandler\EventHandler.csproj", "{6F026A05-8EDF-4A8C-A7CD-DCD879897E6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_IComparable_ICOMPARER", "OOP_IComparable_ICOMPARER\OOP_IComparable_ICOMPARER.csproj", "{F6FF0986-2794-4105-896E-91A92A9FA6BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IComparable_ICOMPARER", "OOP_IComparable_ICOMPARER\IComparable_ICOMPARER.csproj", "{F6FF0986-2794-4105-896E-91A92A9FA6BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Enum", "OOP_Enum\OOP_Enum.csproj", "{369B5AAF-5BEE-4647-9AC8-09B4E6255BEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEnumerable_IEnumerator", "OOP_IEnumerable_IEnumerator\IEnumerable_IEnumerator.csproj", "{F7D4892D-1918-4805-8D46-18980E6EDA36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_IEnumerable_IEnumerator", "OOP_IEnumerable_IEnumerator\OOP_IEnumerable_IEnumerator.csproj", "{F7D4892D-1918-4805-8D46-18980E6EDA36}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_SpecialCollection", "OOP_SpecialCollection\OOP_SpecialCollection.csproj", "{63CBD138-A3E1-47AD-8D89-26FFD393AB13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialCollection", "OOP_SpecialCollection\SpecialCollection.csproj", "{63CBD138-A3E1-47AD-8D89-26FFD393AB13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFAHamburgerci", "WFAHamburgerci\WFAHamburgerci.csproj", "{9CB2D118-AFF3-4617-AEFC-F58451373F57}"
 EndProject
@@ -35,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceTekrarınTekrarı"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReferansAndValueType", "ReferansAndValueType\ReferansAndValueType.csproj", "{576483FC-9408-471F-AB64-5B9A12C1127F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struct_Seald", "Struct_Seald\Struct_Seald.csproj", "{0BF9B5D1-AD14-447F-99AD-C66B02A9B69C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struct", "Struct_Seald\Struct.csproj", "{0BF9B5D1-AD14-447F-99AD-C66B02A9B69C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{1B7F5AF4-56E2-44B4-8988-C62CBCD83683}"
 EndProject
@@ -85,10 +83,6 @@ Global
 		{F6FF0986-2794-4105-896E-91A92A9FA6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6FF0986-2794-4105-896E-91A92A9FA6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6FF0986-2794-4105-896E-91A92A9FA6BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{369B5AAF-5BEE-4647-9AC8-09B4E6255BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{369B5AAF-5BEE-4647-9AC8-09B4E6255BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{369B5AAF-5BEE-4647-9AC8-09B4E6255BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{369B5AAF-5BEE-4647-9AC8-09B4E6255BEA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7D4892D-1918-4805-8D46-18980E6EDA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7D4892D-1918-4805-8D46-18980E6EDA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7D4892D-1918-4805-8D46-18980E6EDA36}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -114,10 +114,11 @@ namespace KayitProjesiTekrar
 
             if (!string.IsNullOrWhiteSpace(guncellenecek.Pic))
             {
-                picEmployee.Image = Image.FromFile(Application.StartupPath + "/Image/" + guncellenecek.Pic);
+                picEmployee.Image = Image.FromFile("Image/" + guncellenecek.Pic); // Burada 'Image' in önüne Application.StartupPath vermememizin sebebi 'Image'in önünde '/' kullanılmamasıdır.
+                                                                                  // Bu tarz bir kullanımda path in önüne proje dizini debug klasörüne kadar gider.
             }
         }
-
+   
         private void button1_Click(object sender, EventArgs e)
         {
             Temizle.FormTemizle(gb_personelBilgileri.Controls);
