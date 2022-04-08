@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E80C71C2-C328-4957-ACF2-11D0784D0387}</ProjectGuid>
+    <ProjectGuid>{8DC9A26F-7C81-4D28-A7D1-142EBCCA134F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>OOP_Delegate</RootNamespace>
-    <AssemblyName>OOP_Delegate</AssemblyName>
+    <RootNamespace>EventHandlerTekrar</RootNamespace>
+    <AssemblyName>EventHandlerTekrar</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Araba.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

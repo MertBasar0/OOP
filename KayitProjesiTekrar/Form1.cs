@@ -19,7 +19,7 @@ namespace KayitProjesiTekrar
             InitializeComponent();
         }
         ListViewItem list;
-        int index = 0;
+        int index = -1;
         Employee guncellenecek;
 
 
@@ -40,7 +40,16 @@ namespace KayitProjesiTekrar
                 e.Pic = Guid.NewGuid().ToString()+ picEmployee.Tag;
                 picEmployee.Image.Save(Application.StartupPath+"/Image/"+e.Pic);
             }
+            else
+            {
+                picEmployee.Image = Image.FromFile(@"C:\Users\Lenovo\Desktop\13b8af1c-a454-4d95-acb7-2a5d5136a54f[2449].jpg");
+                picEmployee.Tag = Path.GetExtension(@"C:\Users\Lenovo\Desktop\13b8af1c-a454-4d95-acb7-2a5d5136a54f[2449].jpg");
+                e.Pic= Guid.NewGuid().ToString()+ picEmployee.Tag;
+                picEmployee.Image.Save(Application.StartupPath + "/Image/" + e.Pic);
+            }
+
             return e;
+            
         }
         public ListViewItem AddList(Employee e)
         {
@@ -75,9 +84,17 @@ namespace KayitProjesiTekrar
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
-            listView1.Items.Add(AddList(AddEmployee(employee)));
-            Temizle.FormTemizle(gb_personelBilgileri.Controls);
+            try
+            {
+                Employee employee = new Employee();
+                listView1.Items.Add(AddList(AddEmployee(employee)));
+                Temizle.FormTemizle(gb_personelBilgileri.Controls);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu.."+"\n"+ex.Message);                
+            }
+            
         }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -108,14 +125,56 @@ namespace KayitProjesiTekrar
 
         private void btn_guncelle_Click(object sender, EventArgs e)
         {
-            listView1.Items.RemoveAt(index);
-            listView1.Items.Insert(index, AddList(AddEmployee(guncellenecek)));
-            Temizle.FormTemizle(gb_personelBilgileri.Controls);
+            if (index == -1)
+            {
+                MessageBox.Show("lütfen bir kayıt seçiniz..");
+            }
+            else
+            {
+                try
+                {
+
+                    listView1.Items.RemoveAt(index);
+                    listView1.Items.Insert(index, AddList(AddEmployee(guncellenecek)));
+                    Temizle.FormTemizle(gb_personelBilgileri.Controls);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bir hata oluştu..");
+                }
+                index = -1;
+            } 
+        }
+
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            index = listView1.SelectedItems[0].Index;
         }
 
         private void btn_sil_Click(object sender, EventArgs e)
         {
-            listView1.Items.RemoveAt(index);
+            if (index == -1)
+            {
+                MessageBox.Show("lütfen bir kayıt seçiniz..");
+            }
+            else
+            {
+                try
+                {
+                    listView1.Items.RemoveAt(index);
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Bir hata oluştu..");
+                }
+                
+                index = -1;
+            }
+            
         }
+
+        
     }
 }
