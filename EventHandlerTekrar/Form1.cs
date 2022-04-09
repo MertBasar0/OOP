@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EventHandlerTekrar;
 
 namespace EventHandlerTekrar
 {
@@ -28,17 +29,43 @@ namespace EventHandlerTekrar
         */
         private void btn_calistir_Click(object sender, EventArgs e)
         {
-            Araba araba = new Araba(70, "BMW");
-            araba.HizAsimi += new HizAsimiEventHandler(Hizlimit);
-            for (int i = 0; i < 7; i++)
+
+            /*  
+                Tıpkı delegete örneklerinde olduğu gibi burada "+=" bir olayı metoda bağlamak için kullanılır. "-="
+            ise çıkarmak için kullanılır.
+            */
+
+
+            /*
+                Yalnız bu noktada dikkat edilmesi gereken nokta olayların bağlanacağı metların imza yapıları olayın türü
+            olan delege ile aynı olmalıdı. Buradan ne çıkarılır; eventları kullanırken muhakkak bir delegete tanımlanmalıdır.
+            Event önünde erişim bildirgeci vs tanımlanabilir..
+             */
+
+
+            //Araba araba = new Araba(70, "BMW");
+            //araba.HizAsimi += new HizAsimiEventHandler(Hizlimit);
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    araba.Hiz += 10;
+            //    lst_sonuc.Items.Add("Arabanın şuanki hızı şudur: " + araba.Hiz);
+            //}
+
+            Product product1 = new Product(1,"Bilgisayar",8000,30);
+            product1.StokAzaldi += new StokAzaldiEvent(product1UrunAzalmaFonksiyonu);
+
+            for (int i = 0; i < 15; i++)
             {
-                araba.Hiz += 10;
-                lst_sonuc.Items.Add("Arabanın şuanki hızı şudur: " + araba.Hiz);  
+                product1.UnitInStock -= 1;
+                lst_sonuc.Items.Add(product1.Name + product1.UnitInPrice + "stok :" + product1.UnitInStock.ToString());
             }
             
         }
 
-
+        private void product1UrunAzalmaFonksiyonu()
+        {
+            lst_sonuc.Items.Add("!!!UYARI stok azaldı..");
+        }
 
         void Hizlimit()
         {
