@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7CD46E9-3315-479B-A047-3C50EACACD4F}</ProjectGuid>
+    <ProjectGuid>{4E88B757-DE5A-4E98-B24F-397C94F6E240}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>IComparable_ICOMPARER</RootNamespace>
-    <AssemblyName>IComparable_ICOMPARER</AssemblyName>
+    <RootNamespace>WFAHamburgerciTekrar</RootNamespace>
+    <AssemblyName>WFAHamburgerciTekrar</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,10 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Takim.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
