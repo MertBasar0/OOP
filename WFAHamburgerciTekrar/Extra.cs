@@ -13,5 +13,11 @@ namespace WFAHamburgerciTekrar
         public string ExtraAdi { get; set; }
 
         public decimal Fiyati { get; set; }
+
+        public override string ToString()
+        {
+            return ExtraAdi;
+        }
+
     }
 }

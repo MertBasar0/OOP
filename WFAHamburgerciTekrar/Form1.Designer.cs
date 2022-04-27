@@ -31,13 +31,13 @@
             this.lst_Siparis = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grb_Boyut = new System.Windows.Forms.GroupBox();
-            this.rbKucuk = new System.Windows.Forms.RadioButton();
-            this.rbOrta = new System.Windows.Forms.RadioButton();
             this.rbBuyuk = new System.Windows.Forms.RadioButton();
+            this.rbOrta = new System.Windows.Forms.RadioButton();
+            this.rbKucuk = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nmrAdet = new System.Windows.Forms.NumericUpDown();
             this.cmbMenuler = new System.Windows.Forms.ComboBox();
             this.btnSiparisEkle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.btn_SiparisOnay = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grb_Boyut.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,16 +79,16 @@
             this.grb_Boyut.TabStop = false;
             this.grb_Boyut.Text = "Boyut Seçiniz";
             // 
-            // rbKucuk
+            // rbBuyuk
             // 
-            this.rbKucuk.AutoSize = true;
-            this.rbKucuk.Location = new System.Drawing.Point(30, 58);
-            this.rbKucuk.Name = "rbKucuk";
-            this.rbKucuk.Size = new System.Drawing.Size(78, 24);
-            this.rbKucuk.TabIndex = 0;
-            this.rbKucuk.TabStop = true;
-            this.rbKucuk.Text = "Küçük";
-            this.rbKucuk.UseVisualStyleBackColor = true;
+            this.rbBuyuk.AutoSize = true;
+            this.rbBuyuk.Location = new System.Drawing.Point(342, 58);
+            this.rbBuyuk.Name = "rbBuyuk";
+            this.rbBuyuk.Size = new System.Drawing.Size(78, 24);
+            this.rbBuyuk.TabIndex = 0;
+            this.rbBuyuk.TabStop = true;
+            this.rbBuyuk.Text = "Büyük";
+            this.rbBuyuk.UseVisualStyleBackColor = true;
             // 
             // rbOrta
             // 
@@ -101,16 +101,16 @@
             this.rbOrta.Text = "Orta";
             this.rbOrta.UseVisualStyleBackColor = true;
             // 
-            // rbBuyuk
+            // rbKucuk
             // 
-            this.rbBuyuk.AutoSize = true;
-            this.rbBuyuk.Location = new System.Drawing.Point(342, 58);
-            this.rbBuyuk.Name = "rbBuyuk";
-            this.rbBuyuk.Size = new System.Drawing.Size(78, 24);
-            this.rbBuyuk.TabIndex = 0;
-            this.rbBuyuk.TabStop = true;
-            this.rbBuyuk.Text = "Büyük";
-            this.rbBuyuk.UseVisualStyleBackColor = true;
+            this.rbKucuk.AutoSize = true;
+            this.rbKucuk.Location = new System.Drawing.Point(30, 58);
+            this.rbKucuk.Name = "rbKucuk";
+            this.rbKucuk.Size = new System.Drawing.Size(78, 24);
+            this.rbKucuk.TabIndex = 0;
+            this.rbKucuk.TabStop = true;
+            this.rbKucuk.Text = "Küçük";
+            this.rbKucuk.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -137,18 +137,18 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Adet :";
             // 
-            // numericUpDown1
+            // nmrAdet
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(69, 596);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.nmrAdet.Location = new System.Drawing.Point(69, 596);
+            this.nmrAdet.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(390, 26);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nmrAdet.Name = "nmrAdet";
+            this.nmrAdet.Size = new System.Drawing.Size(390, 26);
+            this.nmrAdet.TabIndex = 6;
+            this.nmrAdet.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -171,6 +171,7 @@
             this.btnSiparisEkle.TabIndex = 8;
             this.btnSiparisEkle.Text = "Sipariş Ekle";
             this.btnSiparisEkle.UseVisualStyleBackColor = true;
+            this.btnSiparisEkle.Click += new System.EventHandler(this.btnSiparisEkle_Click);
             // 
             // label4
             // 
@@ -219,7 +220,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSiparisEkle);
             this.Controls.Add(this.cmbMenuler);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nmrAdet);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label2);
@@ -230,9 +231,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.grb_Boyut.ResumeLayout(false);
             this.grb_Boyut.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -251,7 +253,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nmrAdet;
         private System.Windows.Forms.ComboBox cmbMenuler;
         private System.Windows.Forms.Button btnSiparisEkle;
         private System.Windows.Forms.Label label4;

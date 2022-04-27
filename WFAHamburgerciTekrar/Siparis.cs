@@ -8,8 +8,6 @@ namespace WFAHamburgerciTekrar
 {
     public class Siparis
     {
-        public int Id { get; set; }
-
         public Menu SeciliMenu { get; set; }
 
         public Boyut Boyutu { get; set; }
@@ -48,11 +46,18 @@ namespace WFAHamburgerciTekrar
         {
             if (Extras.Count == 0)
             {
-                return $"Menü Adı: {SeciliMenu.MenuAdi} Adet: {Adet} Menü Boyutu: {Boyutu.ToString()} Toplam: {ToplamTutar.ToString("C2")}";
+                return $"Menü Adı: {SeciliMenu.MenuAdi}   Adet: {Adet}   Menü Boyutu: {Boyutu.ToString()}   Toplam: {ToplamTutar.ToString("C2")}";
             }
             else
             {
-                return $"Menü Adı: {SeciliMenu.MenuAdi} Adet: {Adet} Menü Boyutu: {Boyutu.ToString()} Toplam: {ToplamTutar.ToString("C2")}";
+                string extraMalzemeler = null;
+                foreach (Extra item in Extras)
+                {
+                    extraMalzemeler += item.ExtraAdi + ",";
+                }
+
+                
+                return $"Menü Adı: {SeciliMenu.MenuAdi}   Adet: {Adet}    extralar: {extraMalzemeler}    Menü Boyutu: {Boyutu.ToString()}   Toplam: {ToplamTutar.ToString("C2")}";
             }
         }
             
