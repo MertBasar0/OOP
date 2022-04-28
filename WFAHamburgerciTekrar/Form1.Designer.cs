@@ -199,6 +199,7 @@
             this.btn_SiparisOnay.TabIndex = 10;
             this.btn_SiparisOnay.Text = "Siparişi Onayla";
             this.btn_SiparisOnay.UseVisualStyleBackColor = true;
+            this.btn_SiparisOnay.Click += new System.EventHandler(this.btn_SiparisOnay_Click);
             // 
             // pictureBox1
             // 

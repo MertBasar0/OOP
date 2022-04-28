@@ -122,11 +122,45 @@ namespace WFAHamburgerciTekrar
 
             yeniSiparis.Hesapla();
             mevcutSiparisler.Add(yeniSiparis);
-            siparisler.Add(yeniSiparis);
 
             lst_Siparis.Items.Add(yeniSiparis.ToString());
 
+            ToplamTutar();
+
             TemizlikSinifi.Temizle(this.Controls);
+        }
+
+        decimal ToplamTutar()
+        {
+            decimal toplamTutar = 0;
+
+            foreach (var item in mevcutSiparisler)
+            {
+                toplamTutar += item.ToplamTutar;
+            }
+            lblToplamTutar.Text = toplamTutar.ToString("C2");
+            return toplamTutar;
+        }
+
+        private void btn_SiparisOnay_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Toplam Sipariş Ücreti : " + ToplamTutar().ToString("C2") + " Satın alma işlemine devam etmek istiyor musunuz ?", "Sipariş Bilgisi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (dr == DialogResult.Yes)
+            {
+                lst_Siparis.Items.Clear();
+                foreach (var item in mevcutSiparisler)
+                {
+                    siparisler.Add(item);
+                }
+                mevcutSiparisler.Clear();
+                ToplamTutar();
+                MessageBox.Show("Sipariş Tamamlandı.");
+            }
+            else
+            {
+                MessageBox.Show("Sipariş iptal edildi.");
+            }
         }
     }
 }
