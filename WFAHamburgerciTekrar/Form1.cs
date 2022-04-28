@@ -16,9 +16,9 @@ namespace WFAHamburgerciTekrar
         {
             InitializeComponent();
         }
-        public static List<Siparis> siparis = new List<Siparis>();
+        public static List<Siparis> siparisler = new List<Siparis>();
 
-        public static List<Siparis> mevcutSiparis = new List<Siparis>();
+        public static List<Siparis> mevcutSiparisler = new List<Siparis>();
 
         public static List<Menu> Menuler = new List<Menu>()
         {
@@ -79,48 +79,54 @@ namespace WFAHamburgerciTekrar
                 flowLayoutPanel1.Controls.Add(checkBox);   
             }
 
-            foreach (var item in mevcutSiparis)
+            foreach (var item in mevcutSiparisler)
             {
                 lst_Siparis.Items.Add(item.ToString());
             }
 
             cmbMenuler.SelectedIndex = 0;
 
+            rbKucuk.Checked = true;
+
         }
 
         private void btnSiparisEkle_Click(object sender, EventArgs e)
         {
-            Siparis siparis = new Siparis();
+            Siparis yeniSiparis = new Siparis();
 
-            siparis.SeciliMenu = ((Menu)cmbMenuler.SelectedItem);
+            yeniSiparis.SeciliMenu = ((Menu)cmbMenuler.SelectedItem);
 
             if (rbOrta.Checked)
             {
-                siparis.Boyutu = Boyut.Orta;
+                yeniSiparis.Boyutu = Boyut.Orta;
             }
             else if (rbBuyuk.Checked)
             {
-                siparis.Boyutu = Boyut.Buyuk;
+                yeniSiparis.Boyutu = Boyut.Buyuk;
             }
             else
             {
-                siparis.Boyutu = Boyut.Kucuk;
+                yeniSiparis.Boyutu = Boyut.Kucuk;
             }
 
-            siparis.Extras = new List<Extra>();
+            yeniSiparis.Extras = new List<Extra>();
             foreach (CheckBox item in flowLayoutPanel1.Controls)
             {
                 if (item.Checked)
                 {
-                    siparis.Extras.Add((Extra)item.Tag);
+                    yeniSiparis.Extras.Add((Extra)item.Tag);
                 }
             }
 
-            siparis.Adet = Convert.ToInt32(nmrAdet.Value);
+            yeniSiparis.Adet = Convert.ToInt32(nmrAdet.Value);
 
-            siparis.Hesapla();
+            yeniSiparis.Hesapla();
+            mevcutSiparisler.Add(yeniSiparis);
+            siparisler.Add(yeniSiparis);
 
-            lst_Siparis.Items.Add(siparis.ToString());
+            lst_Siparis.Items.Add(yeniSiparis.ToString());
+
+            TemizlikSinifi.Temizle(this.Controls);
         }
     }
 }
