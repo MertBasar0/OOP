@@ -35,12 +35,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_Fiyat)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_Close);
             this.groupBox1.Controls.Add(this.btn_Ekle);
             this.groupBox1.Controls.Add(this.nmr_Fiyat);
             this.groupBox1.Controls.Add(this.txt_ExtraAdi);
@@ -55,12 +57,13 @@
             // 
             // btn_Ekle
             // 
-            this.btn_Ekle.Location = new System.Drawing.Point(284, 213);
+            this.btn_Ekle.Location = new System.Drawing.Point(184, 194);
             this.btn_Ekle.Name = "btn_Ekle";
-            this.btn_Ekle.Size = new System.Drawing.Size(140, 47);
+            this.btn_Ekle.Size = new System.Drawing.Size(106, 47);
             this.btn_Ekle.TabIndex = 3;
             this.btn_Ekle.Text = "Ekle";
             this.btn_Ekle.UseVisualStyleBackColor = true;
+            this.btn_Ekle.Click += new System.EventHandler(this.btn_Ekle_Click);
             // 
             // nmr_Fiyat
             // 
@@ -104,6 +107,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fiyatı";
             // 
+            // btn_Close
+            // 
+            this.btn_Close.Location = new System.Drawing.Point(318, 194);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(106, 47);
+            this.btn_Close.TabIndex = 3;
+            this.btn_Close.Text = "Kapat";
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -129,5 +142,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btn_Close;
     }
 }

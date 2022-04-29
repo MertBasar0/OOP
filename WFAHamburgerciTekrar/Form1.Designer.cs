@@ -44,6 +44,7 @@
             this.lblToplamTutar = new System.Windows.Forms.Label();
             this.btn_SiparisOnay = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.grb_Boyut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -211,11 +212,24 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_Close
+            // 
+            this.btn_Close.AutoSize = true;
+            this.btn_Close.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_Close.Location = new System.Drawing.Point(1459, 720);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(61, 30);
+            this.btn_Close.TabIndex = 10;
+            this.btn_Close.Text = "Kapat";
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1625, 810);
+            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.btn_SiparisOnay);
             this.Controls.Add(this.lblToplamTutar);
             this.Controls.Add(this.label4);
@@ -260,6 +274,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblToplamTutar;
         private System.Windows.Forms.Button btn_SiparisOnay;
+        private System.Windows.Forms.Button btn_Close;
     }
 }
 

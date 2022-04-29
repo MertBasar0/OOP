@@ -24,25 +24,21 @@ namespace WFAHamburgerciTekrar
         {
             new Menu()
             {
-                Id = 1,
                 MenuAdi ="SteakHouse",
                 Fiyati = 15
             },
             new Menu()
             {
-                Id = 2,
                 MenuAdi ="ChickenBurger",
                 Fiyati = 7
             },
             new Menu()
             {
-                Id = 3,
                 MenuAdi ="Whooper",
                 Fiyati=16
             },
             new Menu()
             {
-                Id = 4,
                 MenuAdi ="BigKing",
                 Fiyati = 9
             }
@@ -52,13 +48,11 @@ namespace WFAHamburgerciTekrar
         {
             new Extra()
             {
-                Id=1,
                 ExtraAdi = "Ranch",
                 Fiyati = 2
             },
             new Extra()
             {
-                Id = 2,
                 ExtraAdi = "Soğan",
                 Fiyati = 1
             }
@@ -161,6 +155,11 @@ namespace WFAHamburgerciTekrar
             {
                 MessageBox.Show("Sipariş iptal edildi.");
             }
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

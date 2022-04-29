@@ -38,6 +38,7 @@
             this.lblCiro = new System.Windows.Forms.Label();
             this.lstSiparisler = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_CLose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -47,7 +48,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblSatilanUrunAdet);
-            this.groupBox1.Location = new System.Drawing.Point(655, 398);
+            this.groupBox1.Location = new System.Drawing.Point(1160, 398);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(276, 107);
             this.groupBox1.TabIndex = 0;
@@ -65,7 +66,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblExtraMalzeme);
-            this.groupBox2.Location = new System.Drawing.Point(655, 285);
+            this.groupBox2.Location = new System.Drawing.Point(1160, 285);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(276, 107);
             this.groupBox2.TabIndex = 0;
@@ -83,7 +84,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lblToplamSiparis);
-            this.groupBox3.Location = new System.Drawing.Point(655, 172);
+            this.groupBox3.Location = new System.Drawing.Point(1160, 172);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(276, 107);
             this.groupBox3.TabIndex = 0;
@@ -101,7 +102,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.lblCiro);
-            this.groupBox4.Location = new System.Drawing.Point(655, 59);
+            this.groupBox4.Location = new System.Drawing.Point(1160, 59);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(276, 107);
             this.groupBox4.TabIndex = 0;
@@ -122,7 +123,7 @@
             this.lstSiparisler.ItemHeight = 20;
             this.lstSiparisler.Location = new System.Drawing.Point(27, 59);
             this.lstSiparisler.Name = "lstSiparisler";
-            this.lstSiparisler.Size = new System.Drawing.Size(578, 444);
+            this.lstSiparisler.Size = new System.Drawing.Size(1111, 444);
             this.lstSiparisler.TabIndex = 1;
             // 
             // label1
@@ -134,19 +135,32 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tüm Siparişler";
             // 
+            // btn_CLose
+            // 
+            this.btn_CLose.Location = new System.Drawing.Point(1327, 536);
+            this.btn_CLose.Name = "btn_CLose";
+            this.btn_CLose.Size = new System.Drawing.Size(109, 38);
+            this.btn_CLose.TabIndex = 3;
+            this.btn_CLose.Text = "Kapat";
+            this.btn_CLose.UseVisualStyleBackColor = true;
+            this.btn_CLose.Click += new System.EventHandler(this.btn_CLose_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 570);
+            this.ClientSize = new System.Drawing.Size(1518, 631);
+            this.Controls.Add(this.btn_CLose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstSiparisler);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form4";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -172,5 +186,6 @@
         private System.Windows.Forms.Label lblCiro;
         private System.Windows.Forms.ListBox lstSiparisler;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_CLose;
     }
 }

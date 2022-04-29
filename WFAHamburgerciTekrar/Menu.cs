@@ -8,8 +8,6 @@ namespace WFAHamburgerciTekrar
 {
     public class Menu
     {
-        public int Id { get; set; }
-
         public string MenuAdi { get; set; }
 
         public decimal Fiyati { get; set; }

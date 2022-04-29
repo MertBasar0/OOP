@@ -16,5 +16,31 @@ namespace WFAHamburgerciTekrar
         {
             InitializeComponent();
         }
+
+        private void btn_Kaydet_Click(object sender, EventArgs e)
+        {
+            if (txt_menuAdi != null)
+            {
+                Form1.Menuler.Add(MenuAdd());
+                TemizlikSinifi.Temizle(this.Controls);
+                MessageBox.Show($"{txt_menuAdi.Text} Menulere eklendi..");
+            } 
+        }
+
+
+        public Menu MenuAdd()
+        {
+            Menu menu = new Menu()
+            {
+                MenuAdi = txt_menuAdi.Text,
+                Fiyati = nmr_Fiyat.Value
+            };
+            return menu;
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

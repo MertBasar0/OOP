@@ -30,9 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.siparişYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ürünYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siparişOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siparişBİlgileriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ürünYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hamburgerEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.extraMalzemeEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -60,6 +60,20 @@
             this.siparişYönetimiToolStripMenuItem.Size = new System.Drawing.Size(153, 29);
             this.siparişYönetimiToolStripMenuItem.Text = "Sipariş Yönetimi";
             // 
+            // siparişOluşturToolStripMenuItem
+            // 
+            this.siparişOluşturToolStripMenuItem.Name = "siparişOluşturToolStripMenuItem";
+            this.siparişOluşturToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.siparişOluşturToolStripMenuItem.Text = "Sipariş Oluştur";
+            this.siparişOluşturToolStripMenuItem.Click += new System.EventHandler(this.siparişOluşturToolStripMenuItem_Click);
+            // 
+            // siparişBİlgileriToolStripMenuItem
+            // 
+            this.siparişBİlgileriToolStripMenuItem.Name = "siparişBİlgileriToolStripMenuItem";
+            this.siparişBİlgileriToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.siparişBİlgileriToolStripMenuItem.Text = "Sipariş Bİlgileri";
+            this.siparişBİlgileriToolStripMenuItem.Click += new System.EventHandler(this.siparişBİlgileriToolStripMenuItem_Click);
+            // 
             // ürünYönetimiToolStripMenuItem
             // 
             this.ürünYönetimiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -69,34 +83,25 @@
             this.ürünYönetimiToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
             this.ürünYönetimiToolStripMenuItem.Text = "Ürün Yönetimi";
             // 
-            // siparişOluşturToolStripMenuItem
-            // 
-            this.siparişOluşturToolStripMenuItem.Name = "siparişOluşturToolStripMenuItem";
-            this.siparişOluşturToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.siparişOluşturToolStripMenuItem.Text = "Sipariş Oluştur";
-            // 
-            // siparişBİlgileriToolStripMenuItem
-            // 
-            this.siparişBİlgileriToolStripMenuItem.Name = "siparişBİlgileriToolStripMenuItem";
-            this.siparişBİlgileriToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.siparişBİlgileriToolStripMenuItem.Text = "Sipariş Bİlgileri";
-            // 
             // hamburgerEkleToolStripMenuItem
             // 
             this.hamburgerEkleToolStripMenuItem.Name = "hamburgerEkleToolStripMenuItem";
-            this.hamburgerEkleToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.hamburgerEkleToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.hamburgerEkleToolStripMenuItem.Text = "Hamburger Ekle";
+            this.hamburgerEkleToolStripMenuItem.Click += new System.EventHandler(this.hamburgerEkleToolStripMenuItem_Click);
             // 
             // extraMalzemeEkleToolStripMenuItem
             // 
             this.extraMalzemeEkleToolStripMenuItem.Name = "extraMalzemeEkleToolStripMenuItem";
-            this.extraMalzemeEkleToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.extraMalzemeEkleToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.extraMalzemeEkleToolStripMenuItem.Text = "Extra Malzeme Ekle";
+            this.extraMalzemeEkleToolStripMenuItem.Click += new System.EventHandler(this.extraMalzemeEkleToolStripMenuItem_Click);
             // 
             // MyMDIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1624, 745);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
