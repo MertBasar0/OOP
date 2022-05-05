@@ -63,14 +63,14 @@
             // siparişOluşturToolStripMenuItem
             // 
             this.siparişOluşturToolStripMenuItem.Name = "siparişOluşturToolStripMenuItem";
-            this.siparişOluşturToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.siparişOluşturToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.siparişOluşturToolStripMenuItem.Text = "Sipariş Oluştur";
             this.siparişOluşturToolStripMenuItem.Click += new System.EventHandler(this.siparişOluşturToolStripMenuItem_Click);
             // 
             // siparişBİlgileriToolStripMenuItem
             // 
             this.siparişBİlgileriToolStripMenuItem.Name = "siparişBİlgileriToolStripMenuItem";
-            this.siparişBİlgileriToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.siparişBİlgileriToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.siparişBİlgileriToolStripMenuItem.Text = "Sipariş Bİlgileri";
             this.siparişBİlgileriToolStripMenuItem.Click += new System.EventHandler(this.siparişBİlgileriToolStripMenuItem_Click);
             // 
@@ -104,6 +104,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1624, 745);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MyMDIForm";

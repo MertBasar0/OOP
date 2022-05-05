@@ -16,7 +16,7 @@ namespace WFAHamburgerciTekrar
             {
                 if (control is TextBox)
                 {
-                    ((TextBox)control).Text = " ";
+                    ((TextBox)control).Text = null;
                 }
                 else if (control is ComboBox)
                 {
@@ -43,6 +43,16 @@ namespace WFAHamburgerciTekrar
                             {
                                 rB.Checked = false;
                             }
+                        }
+                        else if (item is TextBox)
+                        {
+                            TextBox tx = (TextBox)item;
+                            tx.Text = null;
+                        }
+                        else if (item is NumericUpDown)
+                        {
+                            NumericUpDown nm = (NumericUpDown)item;
+                            nm.Value = 1;
                         }
                     }
                 }
